@@ -24,7 +24,7 @@ function FormPostagem() {
 
     async function buscarPostagemPorId(id: string) {
         try {
-            await buscar(`/postagens/${id}`, setPostagem, {
+            await buscar(`/Postagens/${id}`, setPostagem, {
                 headers: { Authorization: token }
             })
         } catch (error: any) {
@@ -99,7 +99,7 @@ function FormPostagem() {
 
         if (id !== undefined) {
             try {
-                await atualizar(`/postagens`, postagem, setPostagem, {
+                await atualizar(`/Postagens`, postagem, setPostagem, {
                     headers: {
                         Authorization: token,
                     },
@@ -117,7 +117,7 @@ function FormPostagem() {
 
         } else {
             try {
-                await cadastrar(`/postagens`, postagem, setPostagem, {
+                await cadastrar(`/Postagens`, postagem, setPostagem, {
                     headers: {
                         Authorization: token,
                     },
